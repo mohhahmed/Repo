@@ -1,8 +1,6 @@
 provider "aws" {
   version = "~> 3.0"
   region  = var.region
-  access_key = "AKIATYTATEV62VO3W7F4"
-  secret_key = "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"
 }
 
 resource "aws_vpc" "hashicat" {
@@ -127,6 +125,8 @@ resource "aws_instance" "hashicat" {
 
   tags = {
     Name = "${var.prefix}-hashicat-instance"
+    Department = "cloud-teams"
+    Billable   = "data"
   }
 }
 
