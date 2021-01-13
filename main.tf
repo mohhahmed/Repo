@@ -1,8 +1,6 @@
 provider "aws" {
   version = "~> 3.0"
   region  = var.region
-  access_key = "AKIAQQRJSFWMCXVU3KWU"
-secret_key = "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"
 }
 
 resource "aws_vpc" "hashicat" {
